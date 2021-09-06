@@ -1,0 +1,84 @@
+<canvas id='canvas'/>
+<script>
+function draw() {
+  var ctx = document.getElementById('canvas').getContext('2d');
+
+  ctx.save(); //cuadrado
+  ctx.rotate((Math.PI / 180) * 45);
+  ctx.translate(10, -45);
+  ctx.fillStyle = '#b22222';
+  ctx.fillRect(20, 20, 50, 50);
+  //triangulo iz
+  ctx.fillStyle = '#d83131';
+  ctx.rotate((Math.PI / 180) * 90);
+  ctx.translate(5, -125);
+  ctx.beginPath();
+    ctx.moveTo(75, 50);
+    ctx.lineTo(75, 100);
+    ctx.lineTo(100, 25);
+    ctx.fill();
+  //triangulo dr
+  ctx.fillStyle = '#6f0000';
+  ctx.rotate((Math.PI / 180) * 180);
+  ctx.translate(-145, -95);
+  ctx.beginPath();
+    ctx.moveTo(75, 50);
+    ctx.lineTo(125, 50);
+    ctx.lineTo(50, 75);
+    ctx.fill();
+  ctx.restore();
+
+  //cuadrado
+  ctx.rotate((Math.PI / 180) * 45);
+  ctx.translate(67, -102);
+  ctx.fillStyle = '#b22222';
+  ctx.fillRect(20, 20, 50, 50);
+ 
+  //triangulo iz
+  ctx.fillStyle = '#d83131';
+  ctx.rotate((Math.PI / 180) * 90);
+  ctx.translate(-5, -120);
+  ctx.beginPath();
+    ctx.moveTo(75, 50);
+    ctx.lineTo(75, 100);
+    ctx.lineTo(100, 25);
+    ctx.fill();
+
+  //triangulo dr
+  ctx.fillStyle = '#6f0000';
+  ctx.rotate((Math.PI / 180) * 180);
+  ctx.translate(-150, -100);
+  ctx.beginPath();
+    ctx.moveTo(75, 50);
+    ctx.lineTo(125, 50);
+    ctx.lineTo(50, 75);
+    ctx.fill();
+
+  //cuadrado
+  ctx.rotate((Math.PI / 180) * 40);
+  ctx.translate(120, -80);
+  ctx.fillStyle = '#b22222';
+  ctx.fillRect(20, 20, 50, 50);
+
+  //triangulo iz rotado
+  ctx.fillStyle = '#d83131';
+  ctx.rotate((Math.PI / 180) * 90);
+  ctx.translate(-5, -120);
+  ctx.beginPath();
+    ctx.moveTo(75, 50);
+    ctx.lineTo(75, 100);
+    ctx.lineTo(100, 25);
+    ctx.fill();
+
+  //triangulo dr rotado
+  ctx.fillStyle = '#6f0000';
+  ctx.rotate((Math.PI / 180) * 180);
+  ctx.translate(-150, -100);
+  ctx.beginPath();
+    ctx.moveTo(75, 50);
+    ctx.lineTo(125, 50);
+    ctx.lineTo(50, 75);
+    ctx.fill();
+}
+draw();
+</script>
